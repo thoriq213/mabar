@@ -60,9 +60,10 @@
             console.log(`Code matched = ${decodedText}`, decodedResult);
 
             if (IS_SEND_HADIR == 0) {
+                let data = JSON.parse(decodedText);
                 IS_SEND_HADIR = 1;
                 $.ajax({
-                    url: `/peserta/hadir/${decodedText}`,
+                    url: `/peserta/hadir/${data.id}`,
                     type: "GET",
                     success: function(response) {
                         if (response.status === 'success') {
