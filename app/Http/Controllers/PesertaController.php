@@ -18,7 +18,7 @@ class PesertaController extends Controller
 
     public function get_data()
     {
-        $users = Peserta::select(['id', 'no_excel', 'nama_lengkap', 'no_whatsapp', 'jenis_kelamin', 'domisili', 'is_hadir']);
+        $users = Peserta::select(['id', 'no_excel', 'nama_lengkap', 'jenis_kelamin', 'domisili', 'is_hadir']);
 
         return DataTables::of($users)
             ->addColumn('action', function ($user) {

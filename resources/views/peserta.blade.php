@@ -47,7 +47,6 @@
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
-                        <th>Nomor Whatsapp</th>
                         <th>Domilisi</th>
                         <th>QR</th>
                         <th>STATUS</th>
@@ -82,10 +81,6 @@
                     {
                         data: 'nama_lengkap',
                         name: 'nama_lengkap'
-                    },
-                    {
-                        data: 'no_whatsapp',
-                        name: 'no_whatsapp'
                     },
                     {
                         data: 'domisili',

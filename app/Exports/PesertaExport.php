@@ -29,7 +29,6 @@ class PesertaExport implements FromCollection, WithHeadings, WithMapping, WithEv
             'No Excel',
             'Nama Lengkap',
             'Usia',
-            'No. WhatsApp',
             'Jenis Kelamin',
             'Domisili',
             'QR Code Aktivasi',
@@ -52,7 +51,6 @@ class PesertaExport implements FromCollection, WithHeadings, WithMapping, WithEv
             $user->no_excel,
             $user->nama_lengkap,
             $user->usia,
-            $user->no_whatsapp,
             $user->jenis_kelamin,
             $user->domisili,
             $qrCodePath, // Path is used to reference the image in afterSheet
