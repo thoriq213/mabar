@@ -13,6 +13,7 @@ Route::get('/import-peserta', function () {
 Route::get('/peserta-panitia', [PesertaController::class, 'index']);
 Route::get('/scanner-panitia', [PesertaController::class, 'scan']);
 Route::get('/', [PesertaController::class, 'get_barcode_by_name']);
-Route::post('/peserta/get_data', [PesertaController::class, 'get_barcode']);
+Route::post('/peserta/qr', [PesertaController::class, 'get_barcode']);
+Route::get('/peserta/get_data', [PesertaController::class, 'get_data']);
 Route::get('/peserta/qr/{id}', [PesertaController::class, 'downloadQrCode']);
 Route::get('/peserta/hadir/{id}', [PesertaController::class, 'hadir']);

@@ -94,7 +94,12 @@ class PesertaController extends Controller
 
     public function get_barcode_by_name()
     {
-        return view('form');
+        $domisili = Peserta::select('domisili')
+            ->distinct()
+            ->orderBy('domisili', 'asc') // Urutkan secara ascending (A-Z)
+            ->get();
+        $data['domisili'] = $domisili;
+        return view('form', $data);
     }
 
     public function get_barcode(Request $request)

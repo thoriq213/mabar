@@ -46,14 +46,9 @@
             <label for="domisili" class="form-label">Domisili</label>
             <select class="form-select" aria-label="Default select example" id="domisili">
                 <option selected>Open this select menu</option>
-                <option value="Jatimekar">Jatimekar</option>
-                <option value="Jatiluhur">Jatiluhur</option>
-                <option value="Jatirasa">Jatirasa</option>
-                <option value="Jatiasih">Jatiasih</option>
-                <option value="Jatisari">Jatisari</option>
-                <option value="Jatikramat">Jatikramat</option>
-                <option value="Pondok melati">Pondok melati</option>
-                <option value="jatisampurna">jatisampurna</option>
+                @foreach ($domisili as $item)
+                    <option value="{{$item->domisili}}">{{$item->domisili}}</option>
+                @endforeach
             </select>
         </div>
         <div class="">
@@ -109,7 +104,7 @@
             $('#main-content').addClass('d-none');
 
             $.ajax({
-                url: "{{ url('/peserta/get_data') }}",
+                url: "{{ url('/peserta/qr') }}",
                 method: "POST",
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
