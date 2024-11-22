@@ -40,7 +40,7 @@
                 </div>
             </div>
         </nav>
-        <a class="btn btn-primary mt-5" href="{{url('/import-peserta')}}" target="_blank">Download Data Peserta</a>
+        <a class="btn btn-primary mt-5 d-none" href="{{url('/import-peserta')}}" target="_blank">Download Data Peserta</a>
         <div class="table-responsive mt-3">
             <table id="users-table" class="table table-striped table-bordered">
                 <thead>
